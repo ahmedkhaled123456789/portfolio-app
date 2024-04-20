@@ -1,0 +1,24 @@
+.bg-dark {
+    background: $darkCol;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.links-social {
+    a:hover {
+        svg,
+        g,
+        path {
+            fill: #d09800;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}

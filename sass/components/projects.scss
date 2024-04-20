@@ -1,0 +1,67 @@
+#projects {
+    padding-bottom: 2rem;
+
+    .card-project {
+        .card-project-bg {
+            height: 350px !important;
+            background-position: center 0;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            display: block !important;
+            // width: 280px !important;
+            // height: 280px !important;
+            margin: auto !important;
+            margin-bottom: 10px !important;
+            transition: all 10s ease-out 0s !important;
+            -webkit-transition: all 10s ease-out 0s !important;
+            -moz-transition: all 10s ease-out 0s !important;
+            -ms-transition: all 10s ease-out 0s !important;
+            -o-transition: all 10s ease-out 0s !important;
+            -webkit-border-radius: 0px 0px 3px 3px !important;
+            -moz-border-radius: 0px 0px 3px 3px !important;
+            border-radius: 0px 0px 3px 3px !important;
+            position: relative !important;
+            box-shadow: 0 2px 48px 0 rgb(0 0 0 / 13%) !important;
+            cursor: pointer;
+            margin-top: 30px !important;
+
+            &:hover {
+                background-position: 50% 100%;
+            }
+
+            @media (max-width: 768px) {
+                height: 200px !important;
+            }
+        }
+    }
+
+    .title__heading::before {
+        @media (max-width: 420px) {
+            font-size: 2.8rem !important;
+        }
+    }
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -368px 0
+    }
+
+    100% {
+        background-position: 368px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    /* height: 96px; */
+    position: relative;
+    border-radius: 4px;
+}

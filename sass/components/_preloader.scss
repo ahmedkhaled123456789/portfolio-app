@@ -1,0 +1,98 @@
+.page-loader {
+    background-color: $darkCol;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    transition: 1s;
+}
+
+@keyframes loader {
+    0%,
+    10%,
+    100% {
+        width: 80px;
+        height: 80px;
+    }
+    65% {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@keyframes loaderBlock {
+    0%,
+    30% {
+        transform: rotate(0);
+    }
+    55% {
+        background-color: $primaryCol;
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes loaderBlockInverse {
+    0%,
+    20% {
+        transform: rotate(0);
+    }
+    55% {
+        background-color: $primaryCol;
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    animation: loader 1.2s infinite ease-in-out;
+    transition: .4s;
+}
+
+.loader span.parent {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    animation: loaderBlock 1.2s infinite ease-in-out both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    span.child {
+        background: $darkCol;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+}
+
+.loader span.parent:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.loader span.parent:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span.parent:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span.parent:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}

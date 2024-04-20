@@ -1,0 +1,208 @@
+.bg-dark {
+  background: #1f2229;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.links-social a:hover svg,
+.links-social a:hover g,
+.links-social a:hover path {
+  fill: #d09800;
+}
+
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+.navbar .navbar-brand span b {
+  margin-left: -6px;
+  transform: translateY(4px);
+  display: inline-block;
+  color: #ffc31d !important;
+}
+@media (max-width: 350px) {
+  .navbar .navbar-brand span b {
+    font-size: 15px;
+  }
+}
+.navbar .href-home-section {
+  cursor: pointer;
+}
+
+#projects {
+  padding-bottom: 2rem;
+}
+#projects .card-project .card-project-bg {
+  height: 350px !important;
+  background-position: center 0;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: block !important;
+  margin: auto !important;
+  margin-bottom: 10px !important;
+  transition: all 10s ease-out 0s !important;
+  -webkit-transition: all 10s ease-out 0s !important;
+  -moz-transition: all 10s ease-out 0s !important;
+  -ms-transition: all 10s ease-out 0s !important;
+  -o-transition: all 10s ease-out 0s !important;
+  -webkit-border-radius: 0px 0px 3px 3px !important;
+  -moz-border-radius: 0px 0px 3px 3px !important;
+  border-radius: 0px 0px 3px 3px !important;
+  position: relative !important;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.13) !important;
+  cursor: pointer;
+  margin-top: 30px !important;
+}
+#projects .card-project .card-project-bg:hover {
+  background-position: 50% 100%;
+}
+@media (max-width: 768px) {
+  #projects .card-project .card-project-bg {
+    height: 200px !important;
+  }
+}
+@media (max-width: 420px) {
+  #projects .title__heading::before {
+    font-size: 2.8rem !important;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -368px 0;
+  }
+  100% {
+    background-position: 368px 0;
+  }
+}
+.animated-background {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  /* height: 96px; */
+  position: relative;
+  border-radius: 4px;
+}
+
+#experience .title__heading::before {
+  font-size: 10rem;
+}
+@media (max-width: 768px) {
+  #experience .title__heading::before {
+    font-size: 2.7rem !important;
+  }
+}
+@media (max-width: 420px) {
+  #experience .title__heading::before {
+    font-size: 2.4rem !important;
+  }
+}
+
+.page-loader {
+  background-color: #1f2229;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  transition: 1s;
+}
+
+@keyframes loader {
+  0%, 10%, 100% {
+    width: 80px;
+    height: 80px;
+  }
+  65% {
+    width: 150px;
+    height: 150px;
+  }
+}
+@keyframes loaderBlock {
+  0%, 30% {
+    transform: rotate(0);
+  }
+  55% {
+    background-color: #ffc31d;
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes loaderBlockInverse {
+  0%, 20% {
+    transform: rotate(0);
+  }
+  55% {
+    background-color: #ffc31d;
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+  animation: loader 1.2s infinite ease-in-out;
+  transition: 0.4s;
+}
+
+.loader span.parent {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  animation: loaderBlock 1.2s infinite ease-in-out both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.loader span.parent span.child {
+  background: #1f2229;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.loader span.parent:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader span.parent:nth-child(2) {
+  top: 0;
+  right: 0;
+  animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span.parent:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span.parent:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 350px) {
+  #cta .list-inline-item:not(:last-child) {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

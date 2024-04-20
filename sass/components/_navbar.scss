@@ -1,0 +1,26 @@
+.navbar {
+    .navbar-brand {
+      
+        span {
+            b {
+                margin-left: -6px;
+                transform: translateY(4px);
+                display: inline-block;
+                color: #ffc31d !important;
+                @media (max-width: 350px) {
+                    font-size: 15px
+                }
+                .nav-logo{
+                  background: #ffc31d !important;
+                  color: #1f2229 !important;
+                }
+            }
+            
+        }
+        
+    }
+    .href-home-section {
+        cursor: pointer;
+    }
+}
+ 
