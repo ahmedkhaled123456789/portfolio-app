@@ -50,9 +50,26 @@ section {
     section {
         padding: 3rem 0
     }
+
+    .card-project .info{
+  flex-direction:column;      
+              }
+
+              .card-project .info span{
+                margin-bottom:20px;   
+                        }
 }
 
+@media screen and (max-width: 768px) {
+  
+  .card-project .info{
+flex-direction:column;      
+            }
 
+            .card-project .info span{
+              margin-bottom:20px;   
+                      }
+}
  
 :root {
     --blue: #11cdef;
@@ -533,6 +550,20 @@ mark,
     display: inline-block
 }
 
+.card-project p{
+ 
+ font-size: 20px;
+ margin-bottom: 20px !important;
+}
+.card-project .info{
+ display:flex;
+ justify-content:space-between;
+ 
+  font-size: 16px;
+  margin-bottom: 20px !important;
+
+  color:#fff;
+ }
 .list-inline-item:not(:last-child) {
     margin-right: .5rem
 }
@@ -636,6 +667,8 @@ pre code {
     .container {
         max-width: 540px
     }
+
+   
 }
 
 @media (min-width: 768px) {
@@ -1133,6 +1166,7 @@ pre code {
     .offset-sm-11 {
         margin-left: 91.66667%
     }
+    
 }
 
 @media (min-width: 768px) {
